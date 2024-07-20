@@ -1,0 +1,5 @@
+# The primary mode of the art installation: `playback`, `face_cropping`, `face_averaging`.
+mode: playback
+
+# `0` for local webcam, otherwise an accessible RTSP stream.
+camera: 0
