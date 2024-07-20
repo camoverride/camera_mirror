@@ -21,7 +21,7 @@ def playback(camera):
         if not ret:
             print("Can't read frame!")
             # Don't break -- the first frame may be empty if running this script at start-up.
-            # break
+            break
 
         # Operations on the frame come here
         gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
