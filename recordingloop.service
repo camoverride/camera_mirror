@@ -1,0 +1,19 @@
+; Line 14 (ExecStart) might change
+
+[Unit]
+Description=recording loop
+After=multi-user.target
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+[Service]
+Type=simple
+User=pi
+Restart=always
+WorkingDirectory=/home/pi/camera_mirror
+ExecStartPre=export DISPLAY=:0
+ExecStartPre=WAYLAND_DISPLAY=wayland-1 wlr-randr --output HDMI-A-1 --transform 90
+ExecStart=sudo /home/pi/env/bin/python /home/pi/camera_mirror/portrait_animation.py
+
+[Install]
+WantedBy=multi-user.target

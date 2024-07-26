@@ -1,5 +1,9 @@
-# The primary mode of the art installation: `playback`, `face_cropping`, `face_averaging`.
-mode: playback
+# Current monotor: (1080 x 1920)
+display_width: 1080
+display_height: 1920
 
-# `0` for local webcam, otherwise an accessible RTSP stream.
-camera: 0
+# How often to display a new image in (seconds)
+recording_duration: 30
+
+# How much of the recording should be repeated (must be less than `portrait_refresh`)
+playback_duration: 10
