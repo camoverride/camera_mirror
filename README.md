@@ -9,14 +9,14 @@ If it's your first time using a particular Pi, add your ssh key to GitHub, then:
 - `git clone git@github.com:camoverride/camera_mirror.git`
 - `cd camera_mirror`
 - `python -m venv --system-site-packages .venv`
-- `source env/bin/activate`
+- `source .venv/bin/activate`
 
 Install Python packages:
-- `pip install numpy --upgrade --prefer-binary`
-- `pip install PyYAML opencv-python`
+<!-- - `pip install numpy --upgrade --prefer-binary` -->
+- `pip install numpy PyYAML opencv-python`
 
-- `pip install --upgrade numpy`
-- `pip install --force-reinstall simplejpeg`
+<!-- - `pip install --upgrade numpy` -->
+- `pip install --force-reinstall simplejpeg --default-timeout=1000`
 
 The following are required for the `face_recognition` package:
 
@@ -25,6 +25,7 @@ Install [cmake](https://lindevs.com/install-cmake-on-raspberry-pi/):
 - `sudo apt install -y cmake`
 
 Install [dlib](https://pyimagesearch.com/2018/01/22/install-dlib-easy-complete-guide/):
+- `cd ..`
 - `git clone https://github.com/davisking/dlib.git`
 - `cd dlib`
 - `python setup.py install` (takes a long time)
