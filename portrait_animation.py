@@ -49,7 +49,7 @@ while True:
         #     if cv2.waitKey(20) & 0xFF == ord("q"):
         #         break
 
-        # Record the start and end times to know how long to record for.
+        # Record the start and end times to know how long to record for.    
         start = datetime.now()
         end = start + timedelta(seconds=config["recording_duration"])
         while datetime.now() < end:
